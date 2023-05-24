@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.header {
+  /* border-bottom: 1px solid #e2e8f0; */
+  position: sticky;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 35px;
+  background-color: #fff;
+}
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.nav-item {
+  margin-left: 35px;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: 400;
+  color: #475569;
+}
+
+.nav-link:hover {
+  color: #482ff7;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: 500;
+  color: #482ff7;
+}
+.nav-title {
+  animation: animT 2s 1 forwards;
+}
+.nav-pic {
+  animation: animPic 1s 1 forwards;
+}
+@keyframes animT {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: #482ff7;
+  }
+}
+@keyframes animPic {
+  0% {
+    transform: translateY(-130px);
+  }
+  100% {
+    color: translateX(0px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 11px 5px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    /* opacity: 0; */
+    transform: translateY(0px) translateX(8px) rotate(-90deg);
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(0px) translateY(0px) rotate(90deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(0px) translateX(16px) rotate(-90deg);
+  }
+}
+.Title-Main-Cards {
+  height: 40px;
+}
