@@ -6,6 +6,7 @@ import { readFile } from "fs/promises";
 import { stat } from "fs/promises";
 import Link from "next/link.js";
 import { basename } from "path";
+import { Layout } from "../../components/Layout.js";
 
 export default function Comic({
   id,
@@ -25,10 +26,8 @@ export default function Comic({
         <title>xkcd - Comics for Developers</title>
         <meta name="description" content="Comics for Developers" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <main>
+      <Layout>
         <section className="max-w-md m-auto px-8 flex flex-col justify-center flex-wrap content-center items-center mb-9">
           <h1 className="font-bold text-2xl mb-4">{title}</h1>
           <Image width={width} height={height} src={img} alt={alt}></Image>
@@ -52,7 +51,7 @@ export default function Comic({
             )}
           </div>
         </section>
-      </main>
+      </Layout>
     </>
   );
 }
