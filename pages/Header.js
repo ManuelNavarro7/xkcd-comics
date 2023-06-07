@@ -49,7 +49,7 @@ export default function Header() {
             <li className="nav-item relative z-10">
               {/* <div passHref="/search" className="nav-link"> */}
               <input
-                className="text-sm border border-gray-400  rounded-2xl"
+                className="text-md border border-gray-400  rounded-2xl"
                 ref={searchRef}
                 type="search"
                 onChange={handleChange}
