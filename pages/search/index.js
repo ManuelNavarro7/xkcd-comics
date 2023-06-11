@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link.js";
 import { Layout } from "../../components/Layout.js";
 import Image from "next/image.js";
-import { search } from "../services/index.js";
+import { search } from "../../services/index.js";
 
 export default function Search({ query, results }) {
   return (

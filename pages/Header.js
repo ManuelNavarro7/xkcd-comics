@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import Link from "next/link";
-import { search } from "./services";
+import { search } from "../services";
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
