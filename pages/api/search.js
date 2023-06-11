@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   try {
     const { query } = req;
     const q = query.q;
-    console.log(q);
+    // console.log(q);
     const { results } = await search({ q });
     return res.status(200).json(results);
   } catch (error) {
